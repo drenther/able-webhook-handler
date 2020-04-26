@@ -30,7 +30,10 @@ const getPost = async (slug) => {
     // find the post whose slug matches
     const post = response.data.find(
       // slug from able is appended at the end of the file name
-      (post) => post.name.split("-").pop() === slug
+      // we split string using '-' as delimiter to take `slug.md` part
+      // we split it again using '.' as delimiter to take only the slug value
+      // NOTE: not the most efficient way, but it works
+      (post) => post.name.split("-").pop().split(".").shift() === slug
     );
 
     // pick only path, name and sha property of the post response

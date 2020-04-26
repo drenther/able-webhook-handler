@@ -31,7 +31,7 @@ ${body}`
  *
  * @returns {string}                   the file name in gatsby
  */
-const getFileName = ({ title, slug }) => `${slugify(title)}-${slug}`;
+const getFileName = ({ title, slug }) => `${slugify(title)}-${slug}.md`;
 
 module.exports = {
   getPostFileContent,
