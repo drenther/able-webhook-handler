@@ -2,7 +2,7 @@
 
 This repository contains the code to an express web server that consumes webhook requests from Able and pushes them to a target Github repo to power a blog using static site generators.
 
-Currently, this web server is setup specifically to support a [basic Gatsby markdown](https://github.com/able-bio/able-gatsby-starter).
+Currently, this web server is setup specifically to support a [basic Gatsby markdown](https://github.com/drenther/able-gatsby-starter).
 
 We will be updating this project and add other related projects to support more and more similar use cases in the future.
 
@@ -11,7 +11,7 @@ We will be updating this project and add other related projects to support more 
 This is a basic express app. You can start off by cloning the Git repo -
 
 ```
-git clone https://github.com/able-bio/able-webhook-handler
+git clone https://github.com/drenther/able-webhook-handler
 ```
 
 Then, `cd` into the repo root and install the dependencies
@@ -70,7 +70,7 @@ You can follow Node.js application deployment tutorial for the platform you are 
 
 ### Using Heroku
 
-Heroku makes it really easy to deploy a Node.js application.
+[Heroku](https://heroku.com) makes it really easy to deploy a Node.js application.
 
 That's why we have added a one-click method to get you up and running in Heroku.
 
@@ -86,7 +86,7 @@ You must fill in the necessary `ENV` variable values listed in the form and then
 
 That's why we have added a one-click method to get this repo setup on Glitch for you.
 
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/git?url=https://github.com/able-bio/able-webhook-handler.git)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/git?url=https://github.com/drenther/able-webhook-handler.git)
 
 Click on the **Remix** button and you should have a copy of this git repo running under your Glitch account in minutes.
 

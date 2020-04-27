@@ -2,7 +2,7 @@
   "name": "able-webhook-handler",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/able-bio/able-webhook-handler",
+  "repository": "https://github.com/drenther/able-webhook-handler",
   "author": "Soumyajit Pathak",
   "license": "MIT",
   "scripts": {
