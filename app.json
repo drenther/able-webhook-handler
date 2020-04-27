@@ -1,0 +1,33 @@
+{
+  "name": "able-webhook-handler",
+  "repository": "https://github.com/able-bio/able-webhook-handler",
+  "logo": "https://assets.able.bio/static/img/able_logo_square.svg",
+  "keywords": ["node", "express", "able"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "ABLE_TOKEN": {
+      "description": "Token that you can get from the webhook section in your Posts page inside Able settings. It is used to verify if the request is coming from Able.",
+      "value": ""
+    },
+    "GITHUB_TOKEN": {
+      "description": "An OAuth2 token that can be generated from Github settings to allow API based access to your repos. Don't forget to grant access to repos when generating the token.",
+      "value": ""
+    },
+    "GITHUB_USER": {
+      "description": "Your Github user name",
+      "value": ""
+    },
+    "GITHUB_REPO": {
+      "description": "Github repo where you want the updates to be pushed to",
+      "value": ""
+    },
+    "CONTENT_PATH": {
+      "description": "Path for where the post files are inside your repo. This is an absolute path value from your project root directory.",
+      "value": ""
+    }
+  }
+}
