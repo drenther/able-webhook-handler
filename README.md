@@ -63,8 +63,10 @@ You can follow Node.js application deployment tutorial for the platform you are 
 
 That's why we have set have added a one-click method get you up running in Glitch.
 
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/able-bio/able-webhook-handler?ABLE_TOKEN=&GITHUB_TOKEN=&GITHUB_USER=&GITHUB_REPO=&CONTENT_PATH=)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/git?url=https://github.com/able-bio/able-webhook-handler.git)
 
 Click on the remix button and you should have a copy of this git repo running under your Glitch account in minutes.
 
 From there, all you have to do is add the correct `ENV` variable values in a `.env` file in glitch.
+
+You can use the `.env.example` and related details mentioned above for reference.
