@@ -1,6 +1,6 @@
 # able-webhook-handler
 
-This repository contains the code to an express web server that consumes webhook requests from Able and pushes them to a target Github repo to power a blog (using static site generators)
+This repository contains the code to an express web server that consumes webhook requests from Able and pushes them to a target Github repo to power a blog using static site generators.
 
 Currently, this web server is setup specifically tuned to support a [basic Gatsby markdown](https://github.com/able-bio/able-gatsby-starter).
 
@@ -20,9 +20,7 @@ Then, cd into the repo root and install the dependencies
 npm install
 ```
 
-Finally, setup up the _environment variables_
-
-by copying the contents of the `.env.example` file into `.env` file and set the correct values for each of the following `ENV` variables
+Finally, setup up the **_environment variables_** by copying the contents of the `.env.example` file into `.env` file and set the correct values for each of the following `ENV` variables.
 
 ```sh
 # this is the token you can get from accessing the webhook section in your able settings -> posts page
@@ -51,10 +49,22 @@ npm run dev
 
 This script uses the `.env` to inject the necessary environment variables and [`nodemon`](https://github.com/remy/nodemon/) to run auto updating dev server.
 
-When trying to debug your development server, you can use something like [ngrok](https://ngrok.com/) to expose your localhost server to be able to listen to webhook requests from Able
+When trying to debug your development server, you can use something like [ngrok](https://ngrok.com/) to expose your localhost server to be able to listen to webhook requests from Able.
 
 ## Deployment
 
 You can deploy this repo just like any simple node.js app.
 
 You can follow Node.js application deployment tutorial for the platform you are using.
+
+### Using Glitch
+
+[Glitch](https://glitch.com) is a great environment for rapid prototyping and development. It's a great way to get a Node.js server up and running in matter of seconds.
+
+That's why we have set have added a one-click method get you up running in Glitch.
+
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/able-bio/able-webhook-handler?ABLE_TOKEN=&GITHUB_TOKEN=&GITHUB_USER=&GITHUB_REPO=&CONTENT_PATH=)
+
+Click on the remix button and you should have a copy of this git repo running under your Glitch account in minutes.
+
+From there, all you have to do is add the correct `ENV` variable values in a `.env` file in glitch.
