@@ -112,25 +112,14 @@ app.post("/", async (request, response) => {
 
       const post = await github.getPost(slug);
 
-      // if post is present in github already
+      // if post is present in github already, let's update its content
       if (post) {
-        // if the post file path will remain the same
-        if (post.path === fileName) {
-          await github.updatePost({
-            name: post.name,
-            content,
-            sha: post.sha,
-            message: `update: ${post.name}`,
-          });
-        } else {
-          // if the file path needs to change
-          await github.updatePostContentAndPath({
-            oldFileName: post.name,
-            oldFileSha: post.sha,
-            newFileName: fileName,
-            content,
-          });
-        }
+        await github.updatePost({
+          name: post.name,
+          content,
+          sha: post.sha,
+          message: `update: ${post.name}`,
+        });
       } else {
         // if post is not already in github, let's create it
         await github.createPost({
