@@ -43,6 +43,18 @@ GITHUB_REPO=reponame
 CONTENT_PATH=content/blog
 ```
 
+You can start the dev server by
+
+```
+npm run dev
+```
+
+This script uses the `.env` to inject the necessary environment variables and [`nodemon`](https://github.com/remy/nodemon/) to run auto updating dev server.
+
+When trying to debug your development server, you can use something like [ngrok](https://ngrok.com/) to expose your localhost server to be able to listen to webhook requests from Able
+
 ## Deployment
 
 You can deploy this repo just like any simple node.js app.
+
+You can follow Node.js application deployment tutorial for the platform you are using.
