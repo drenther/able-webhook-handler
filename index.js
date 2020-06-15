@@ -56,18 +56,6 @@ app.post("/", async (request, response) => {
       response.status(200).json({ details: `Post Deleted: ${post.name}` });
     }
 
-    // check the published flag
-    const published = _.get(body, "content.published");
-
-    // for now we will trigger changes for published changes and skip unpublished changes
-    if (!published) {
-      response.status(202).json({
-        details: "Unpublished changes do not trigger updates in Github",
-      });
-
-      return;
-    }
-
     // get the content properties from the request body
     const title = _.get(body, "content.title");
     const contentBody = _.get(body, "content.body");
