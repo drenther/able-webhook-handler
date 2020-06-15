@@ -1,6 +1,5 @@
 const axios = require("axios").default;
 const _ = require("lodash");
-const { nanoid } = require("nanoid");
 
 const config = require("./config");
 
