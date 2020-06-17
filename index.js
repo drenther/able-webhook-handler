@@ -60,6 +60,7 @@ app.post("/", async (request, response) => {
     const title = _.get(body, "content.title");
     const contentBody = _.get(body, "content.body");
     const description = _.get(body, "content.subtitle");
+    const tags = _.get(body, "content.tags");
 
     // get slugified file name
     const fileName = getFileName({ title, slug });
@@ -72,6 +73,7 @@ app.post("/", async (request, response) => {
         title,
         body: contentBody,
         description,
+        tags,
         date: createdAt,
       });
 
@@ -95,6 +97,7 @@ app.post("/", async (request, response) => {
         title,
         body: contentBody,
         description,
+        tags,
         date: updatedAt,
       });
 

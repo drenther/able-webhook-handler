@@ -5,18 +5,20 @@ const slugify = require("slugify");
  *
  * @param {object} params
  * @param {string} params.title          title of the post
- * @param {string} params.description    subtitle or breif description of the post`
+ * @param {string} params.description    subtitle or brief description of the post
+ * @param {string[]} params.tags         an array of string for keywords or tech tags related to the post
  * @param {string} params.body           body of the post
  * @param {string} params.date           date string for created_at or updated_at value
  *
  * @return {string} base64 encoded file content
  */
-const getPostFileContent = ({ title, description, body, date }) =>
+const getPostFileContent = ({ title, description, body, date, tags }) =>
   Buffer.from(
     `---
 title: ${title}
 date: ${date}
-description: ${description}
+${description ? `description: ${description}` : ""}
+${tags.length ? `tags: ${tags.join(", ")}` : ""}
 ---
 
 ${body}`
