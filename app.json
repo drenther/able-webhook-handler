@@ -1,8 +1,10 @@
 {
-  "name": "able-webhook-handler",
+  "name": "Able - Push to Github",
+  "description": "A webhook consumer service built with node that pushes your posts on Able to a target Github repository.",
+  "website": "https://able.bio",
   "repository": "https://github.com/drenther/able-webhook-handler",
   "logo": "https://assets.able.bio/static/img/able_logo_square.svg",
-  "keywords": ["node", "express", "able"],
+  "keywords": ["node", "express", "able", "webhook", "github"],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
