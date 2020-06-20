@@ -22,8 +22,9 @@ app.post("/", async (request, response) => {
   const { body } = request;
 
   try {
-    // get the able token passed in the metadata
-    const token = _.get(body, "metadata.token");
+    // get the able token from the Authorization header
+    const authHeader = request.headers.authorization;
+    const token = authHeader && authHeader.split(" ").pop();
 
     // check if it matches the secret token you have generated in your Able webhook settings
     if (token !== config.ableToken) {
